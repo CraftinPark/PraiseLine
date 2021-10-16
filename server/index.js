@@ -29,18 +29,8 @@ const postSchema = mongoose.Schema({
   },
   performanceDate: Date,
   author: String,
-  leader: String,
-  singer1: String,
-  singer2: String,
-  keyboard: String,
-  electric: String,
-  acoustic: String,
-  bass: String,
-  drummer: String,
-  song1: String,
-  song2: String,
-  song3: String,
-  song4: String,
+  assignments: [{ role: String, members: [String] }],
+  songs: {},
 });
 
 const memberSchema = mongoose.Schema({
