@@ -30,7 +30,7 @@ const postSchema = mongoose.Schema({
   performanceDate: Date,
   author: String,
   assignments: [{ role: String, members: [String] }],
-  songs: {},
+  songs: [{ title: String, author: String, key: String }],
 });
 
 const memberSchema = mongoose.Schema({

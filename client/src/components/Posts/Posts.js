@@ -6,9 +6,15 @@ import "./styles.css";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
+  const [members, setMembers] = useState([]);
   useEffect(() => {
     axios.get("http://localhost:5000/posts").then((response) => {
       setPosts(response.data);
+    });
+
+    axios.get("http://localhost:5000/members").then((response) => {
+      setMembers(response.data);
+      console.log("successfully retrieved members from database...");
     });
   }, []);
 
@@ -16,7 +22,7 @@ const Posts = () => {
     <div className="posts">
       <h3>Posts:</h3>
       {posts.map((post) => {
-        return <Post post={post} />;
+        return <Post key={post._id} post={post} members={members}/>;
       })}
     </div>
   );

@@ -42,4 +42,56 @@
 
 .post {
   margin-bottom: 20px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.post-lineup {
+  display: flex;
+  flex-direction: row;
+}
+
+.post-lineup-label {
+  margin-top: 0px;
+}
+
+.post-lineup-roles {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-lineup-role {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+.post-lineup-role-member {
+  margin-left: 10px;
+}
+
+.post-songs {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.post-songs-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.post-song {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.post-songs-label {
+  margin-top: 0px;
 }

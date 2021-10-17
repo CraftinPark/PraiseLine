@@ -1,31 +1,29 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import LineUpForm from "./LineUpForm";
+import SongsForm from "./SongsForm";
 import "./styles.css";
 
 const ROLES = ["Leader", "Vocal", "Acoustic Guitar", "Keyboard", "Bass", "Drummer", "Electric Guitar"];
 
 const PostForm = () => {
-  const [assignments, setAssignments] = useState([{ role: "Leader", members: [""] }]);
   const [members, setMembers] = useState([]);
+  const [assignments, setAssignments] = useState([{ role: "Leader", members: [""] }]);
+  const [songs, setSongs] = useState([{ title: "" }]);
   const [postData, setPostData] = useState({ author: "", assignments: {}, songs: {} });
+  const initialRender = useRef(true);
 
   useEffect(() => {
     axios.get("http://localhost:5000/members").then((response) => {
       setMembers(response.data);
+      console.log("successfully retrieved members from database...");
     });
   }, []);
 
-  const handleSubmitPost = async () => {
-    let finalAssignments = [...assignments];
-    await setPostData({ ...postData, assignments: finalAssignments });
-    axios.post("http://localhost:5000/posts", postData);
-  };
-
   const memberOptions = members.map((member) => {
     return (
-      <option key={member.firstName} value={member.firstName}>
+      <option key={member._id} value={member._id}>
         {member.firstName + " " + member.lastName}
       </option>
     );
@@ -39,76 +37,34 @@ const PostForm = () => {
     );
   });
 
-  const addRoleOption = (role) => {
-    let newAssignments = [...assignments];
+  const handleSubmitPost = () => {
+    const finalAssignments = [...assignments];
+    const finalSongs = [...songs];
+    const newPost = { ...postData, assignments: finalAssignments, songs: finalSongs };
+    setPostData(newPost);
+    // This triggers useEffect to send post
+  };
 
-    let assignment = newAssignments.find((assignment) => assignment.role === role);
-
-    if (assignment) {
-      //existing property, add member selector as second
-      assignment.members.push("");
-      setAssignments(newAssignments);
-    } else {
-      //new property, create property
-      newAssignments.push({
-        role: role,
-        members: [""],
+  useEffect(() => {
+    if (!initialRender.current) {
+      axios.post("http://localhost:5000/posts", postData).then(() => {
+        console.log("successfully sent post request to server...");
+        console.log(postData);
       });
-      setAssignments(newAssignments);
+    } else {
+      initialRender.current = false;
     }
-  };
-
-  const temp = () => {
-    console.log(assignments);
-  };
-
-  const roleSelectorElements = assignments.map((assignment) => {
-    const memberElements = assignment.members.map((member, i) => {
-      return (
-        <div className="role-selector" key={assignment.role + ":" + i}>
-          <label>
-            {assignment.members.length === 1 ? assignment.role + ": " : assignment.role + " #" + (i + 1) + ": "}
-          </label>
-          <select className="member-selector">
-            <option>select a member</option>
-            {memberOptions}
-          </select>
-          <button>remove</button>
-        </div>
-      );
-    });
-    return <div key={assignment.role}>{memberElements}</div>;
-  });
+  }, [postData]);
 
   return (
     <div className="post-form">
-      <div className="lineup">
-        {roleSelectorElements}
-        <div className="add-role">
-          <select id="add-role-selector" className="add-role-selector">
-            <option>select a role</option>
-            {roleOptions}
-          </select>
-          <button
-            className="add-role-button"
-            onClick={() => addRoleOption(document.getElementById("add-role-selector").value)}
-          >
-            Add
-          </button>
-        </div>
-      </div>
-
-      <div className="songs">
-        <label>Song 1: </label>
-        <input onChange={temp} />
-        <label>Song 2: </label>
-        <input onChange={temp} />
-        <label>Song 3: </label>
-        <input onChange={temp} />
-        <label>Song 4: </label>
-        <input onChange={temp} />
-      </div>
-
+      <LineUpForm
+        assignments={assignments}
+        setAssignments={setAssignments}
+        memberOptions={memberOptions}
+        roleOptions={roleOptions}
+      />
+      <SongsForm songs={songs} setSongs={setSongs} />
       <button className="submit-post-button" onClick={handleSubmitPost}>
         Post Lineup
       </button>
