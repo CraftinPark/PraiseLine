@@ -6,6 +6,7 @@ const Post = ({ post, members }) => {
         {assignment.members.map((member) => {
           let m = members.find((m) => m._id === member);
           if (m) return <div className="post-lineup-role-member">{m.firstName}</div>;
+          return <div>error</div>;
         })}
       </div>
     );

@@ -1,43 +1,5 @@
-.post-form {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  /* width: 200px; */
-}
-
-.lineup {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-}
-
-.songs {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
-
-.submit-post-button {
-  max-height: 30px;
-}
-
-.add-role {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.member-selector {
-  margin-top: 20px;
-}
-
-.members {
-  margin-left: 50px;
-}
-
 .posts {
-  margin-left: 50px;
+  background-color: lightgray;
 }
 
 .post {

@@ -1,4 +1,6 @@
 import React from "react";
+import { Button, Container, MenuItem, Select, Typography } from "@mui/material";
+
 import "./styles.css";
 
 const LineUpForm = ({ assignments, setAssignments, memberOptions, roleOptions }) => {
@@ -6,21 +8,25 @@ const LineUpForm = ({ assignments, setAssignments, memberOptions, roleOptions })
     const memberElements = assignment.members.map((member, j) => {
       return (
         <div className="role-selector" key={assignment.role + ":" + j}>
-          <label>
+          <Typography variant="body1">
             {assignment.members.length === 1 ? assignment.role + ": " : assignment.role + " #" + (j + 1) + ": "}
-          </label>
-          <select
+          </Typography>
+          <Select
             className="member-selector"
+            defaultValue="default"
+            size="small"
             onChange={(e) => {
               let newState = [...assignments];
               newState[i].members[j] = e.target.value;
               setAssignments(newState);
             }}
           >
-            <option>select a member</option>
+            <MenuItem value="default">select a member</MenuItem>
             {memberOptions}
-          </select>
-          <button>remove</button>
+          </Select>
+          <Button variant="contained" color="primary" size="small">
+            remove
+          </Button>
         </div>
       );
     });
@@ -39,7 +45,7 @@ const LineUpForm = ({ assignments, setAssignments, memberOptions, roleOptions })
   };
 
   return (
-    <div className="lineup">
+    <Container className="lineup-form">
       {roleSelectorElements}
       <div className="add-role">
         <select id="add-role-selector" className="add-role-selector">
@@ -53,7 +59,7 @@ const LineUpForm = ({ assignments, setAssignments, memberOptions, roleOptions })
           Add
         </button>
       </div>
-    </div>
+    </Container>
   );
 };
 

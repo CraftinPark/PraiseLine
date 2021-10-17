@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect, useRef } from "react";
+import { Container, MenuItem, Typography } from "@mui/material";
 
 import LineUpForm from "./LineUpForm";
 import SongsForm from "./SongsForm";
@@ -23,9 +24,9 @@ const PostForm = () => {
 
   const memberOptions = members.map((member) => {
     return (
-      <option key={member._id} value={member._id}>
+      <MenuItem key={member._id} value={member._id}>
         {member.firstName + " " + member.lastName}
-      </option>
+      </MenuItem>
     );
   });
 
@@ -57,7 +58,8 @@ const PostForm = () => {
   }, [postData]);
 
   return (
-    <div className="post-form">
+    <Container className="post-form">
+      <Typography variant="h5">Create a Post</Typography>
       <LineUpForm
         assignments={assignments}
         setAssignments={setAssignments}
@@ -68,7 +70,7 @@ const PostForm = () => {
       <button className="submit-post-button" onClick={handleSubmitPost}>
         Post Lineup
       </button>
-    </div>
+    </Container>
   );
 };
 

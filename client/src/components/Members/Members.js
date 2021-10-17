@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios"
+import axios from "axios";
+import { Container } from "@mui/material";
 
+import "./styles.css";
 
 const Members = () => {
   const [members, setMembers] = useState([]);
@@ -12,15 +14,19 @@ const Members = () => {
   }, []);
 
   return (
-    <div className="members">
-      <div className="memberList">
+    <Container className="members">
+      <div className="member-list">
         Member List:
         {members.map((member) => {
-          return <div key={"list"+member._id} className="member">{member.firstName}</div>;
+          return (
+            <div key={"list" + member._id} className="member-list-item">
+              {member.firstName}
+            </div>
+          );
         })}
       </div>
-      <div className="memberInfo"></div>
-    </div>
+      <div className="member-list"></div>
+    </Container>
   );
 };
 

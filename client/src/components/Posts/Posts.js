@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import {Container } from "@mui/material"
 
 import Post from "./Post";
 import "./styles.css";
@@ -19,12 +20,12 @@ const Posts = () => {
   }, []);
 
   return (
-    <div className="posts">
+    <Container className="posts">
       <h3>Posts:</h3>
       {posts.map((post) => {
         return <Post key={post._id} post={post} members={members}/>;
       })}
-    </div>
+    </Container>
   );
 };
 
