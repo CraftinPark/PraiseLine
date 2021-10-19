@@ -22,6 +22,7 @@ const Post = ({ post, members }) => {
 
   return (
     <div className="post">
+      <div className="post-date">{post.performanceDate}</div>
       <div className="post-lineup">
         <h4 className="post-lineup-label">Lineup:</h4>
         <div className="post-lineup-roles">{lineupElements}</div>

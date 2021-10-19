@@ -1,40 +1,64 @@
-.post-form {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  background-color: lightgray;
-}
-
-.lineup-form {
+.postform {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  background-color: darkslategray;
 }
 
-.songs {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
-
-.submit-post-button {
-  max-height: 30px;
-}
-
-.add-role {
+.postform-header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: space-between;
+  height: 50px;
+  border-color: #2c4747;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
 
-.member-selector {
+.postform-header-date {
+  color: #4c7f7f;
+  line-height: 32px;
+  margin: 9px;
 }
 
-.members {
-  margin-left: 50px;
+.postform-header-date label {
+  margin-right: 5px;
 }
 
-.posts {
-  margin-left: 50px;
+.postform-header-date input {
+  height: 32px;
+  background: none repeat scroll 0 0 #426f6f;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}
+
+.postform-header-title {
+  color: #4c7f7f;
+  line-height: 32px;
+  margin: 9px;
+}
+
+.postform-divider {
+  background-color: #253f3f;
+  height: 1px;
+}
+.postform-content {
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px #253f3f;
+  border-radius: 10px;
+}
+
+.postform-submit-button {
+  height: 32px;
+  margin: 0px;
+}
+
+.postform-submit-button button {
+  height: 100%;
+  background: none repeat scroll 0 0 green;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+  width: 100%;
 }

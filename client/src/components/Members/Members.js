@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container } from "@mui/material";
 
 import "./styles.css";
 
@@ -14,7 +13,7 @@ const Members = () => {
   }, []);
 
   return (
-    <Container className="members">
+    <div className="members">
       <div className="member-list">
         Member List:
         {members.map((member) => {
@@ -26,7 +25,7 @@ const Members = () => {
         })}
       </div>
       <div className="member-list"></div>
-    </Container>
+    </div>
   );
 };
 

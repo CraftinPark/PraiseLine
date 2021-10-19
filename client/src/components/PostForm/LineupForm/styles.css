@@ -1,0 +1,129 @@
+.lineup-form {
+  margin-bottom: 10px;
+}
+
+.lineup-form h3 {
+  margin: 0px;
+  color: white;
+}
+
+.lineup-role-selector {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.lineup-role-selector-title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: #4c7f7f;
+  width: 180px;
+}
+
+.lineup-role-selector-members {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  width: 150px;
+  margin-right: 5px;
+}
+
+.lineup-role-selector-members select {
+  height: 32px;
+  background: none repeat scroll 0 0 #426f6f;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}
+
+.lineup-role-selector-remove {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.lineup-role-selector-remove button {
+  height: 32px;
+  background: none repeat scroll 0 0 #830000;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}
+
+.lineup-addrole {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.lineup-addrole-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.lineup-addrole-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.lineup-addrole select {
+  height: 32px;
+  background: none repeat scroll 0 0 #426f6f;
+  border: 0px;
+  border-radius: 5px 0px 0px 5px;
+  color: white;
+  width: 150px;
+}
+
+.lineup-addrole-button button {
+  height: 32px;
+  background: none repeat scroll 0 0 #0063b2;
+  border: 0px;
+  border-radius: 0px 5px 5px 0px;
+  color: white;
+  width: 120px;
+}
+
+.lineup-role-selector-empty-error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.lineup-role-selector-empty-error .pane {
+  margin-left: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  background-color: rgba(223, 43, 43, 0.8);
+  border-radius: 5px;
+  width: auto;
+  height: 32px;
+}
+
+.lineup-role-selector-empty-error .arrow {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+
+  border-right: 10px solid rgba(223, 43, 43, 0.8);
+}
+
+.lineup-role-selector-empty-error label {
+  opacity: 100%;
+  font-family: Rubik;
+  font-size: 14px;
+  line-height: 32px;
+  color: white;
+}

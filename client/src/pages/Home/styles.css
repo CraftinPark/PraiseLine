@@ -1,0 +1,37 @@
+.home-page {
+  display: grid;
+
+  grid-template-areas: "navbar navbar navbar" "post-form posts members";
+  grid-template-rows: 50px auto;
+  grid-template-columns: 800px auto 300px;
+  height: 100vh;
+  background-color: green;
+}
+
+.home-page nav {
+  grid-area: navbar;
+  background-color: #4682b4;
+  color: white;
+
+}
+
+.home-page .left-main {
+  grid-area: post-form;
+  background-color: #2f3136;
+}
+
+.home-page .middle-main {
+  grid-area: posts;
+  background-color: #36393f;
+}
+
+.home-page .right-main {
+  grid-area: members;
+  background-color: #2f3136;
+}
+
+.main-title {
+  margin: 0px 0px 0px 5px;
+  font-size: 50px;
+  line-height: 50px;
+}

@@ -1,0 +1,74 @@
+.songs-form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.songs-form h3 {
+  margin: 0px;
+  color:white;
+}
+
+.song-selector {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.song-selector-name {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: #4c7f7f;
+  width: 120px;
+}
+
+.song-selector-title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: white;
+  margin-right: 10px;
+}
+
+.song-selector-input {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  width: 200px;
+  margin-right: 5px;
+}
+
+.song-selector-input input {
+  height: 32px;
+  background: none repeat scroll 0 0 #426f6f;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}
+
+.song-selector-remove {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.song-selector-remove button {
+  height: 32px;
+  background: none repeat scroll 0 0 #830000;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+} 
+
+.songs-addsong button {
+  height: 32px;
+  background: none repeat scroll 0 0 #0063b2;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+  width: 120px;
+}
