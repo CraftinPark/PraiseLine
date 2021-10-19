@@ -3,10 +3,15 @@ const Post = ({ post, members }) => {
     return (
       <div className="post-lineup-role" key={post._id + "role" + i}>
         {assignment.role + ": "}
-        {assignment.members.map((member) => {
+        {assignment.members.map((member, j) => {
           let m = members.find((m) => m._id === member);
-          if (m) return <div className="post-lineup-role-member">{m.firstName}</div>;
-          return <div>error</div>;
+          if (m)
+            return (
+              <div key={"post:" + assignment.role + ":" + j} className="post-lineup-role-member">
+                {m.firstName}
+              </div>
+            );
+          return <div key={"post:" + assignment.role + ":" + j + ":error"}>error</div>;
         })}
       </div>
     );

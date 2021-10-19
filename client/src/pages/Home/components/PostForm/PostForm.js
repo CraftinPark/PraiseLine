@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 import Header from "./Header/Header";
 import Lineup from "./Lineup/Lineup";
@@ -12,27 +13,34 @@ const PostForm = ({ members }) => {
   const [postAttempt, setPostAttempt] = useState(false);
 
   const handleSubmitPost = () => {
-    console.log("start submit");
-    if (!postAttempt) setPostAttempt(true);
-    else setPostAttempt(false);
-
+    setPostAttempt(true);
+    // Catch Empty Member Entry
     for (let assignment in assignments) {
       for (let member in assignments[assignment].members) {
         if (!assignments[assignment].members[member]) {
-          //console.log(assignments[assignment].role + ": member index " + member + " is empty");
-          // render error window onto corresponding selector!
+          console.log(assignments[assignment].role + ": member index " + member + " is empty");
+          return;
         }
       }
     }
-
-    // axios.post("http://localhost:5000/posts", {
-    //   author: "",
-    //   assignments: [...assignments],
-    //   songs: [...songs],
-    //   performanceDate: date
-    // }).then(() => {
-    //     console.log("successfully sent post request to server...");
-    //   });
+    // Catch Empty Song Entry
+    for (let song in songs) {
+      if (!songs[song].title) {
+        console.log("song #" + song + " is empty");
+        return;
+      }
+    }
+    // Proceed.
+    axios
+      .post("http://localhost:5000/posts", {
+        author: "",
+        assignments: [...assignments],
+        songs: [...songs],
+        performanceDate: date,
+      })
+      .then(() => {
+        console.log("successfully sent post request to server...");
+      });
   };
 
   return (
@@ -41,7 +49,7 @@ const PostForm = ({ members }) => {
       <div className="content">
         <Lineup assignments={assignments} setAssignments={setAssignments} members={members} postAttempt={postAttempt} />
         <div className="divider" />
-        <Songs songs={songs} setSongs={setSongs} />
+        <Songs songs={songs} setSongs={setSongs} postAttempt={postAttempt} />
       </div>
       <button className="submit" onClick={handleSubmitPost}>
         Post Lineup

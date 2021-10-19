@@ -1,0 +1,45 @@
+.song-selector {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.song-selector .label {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: #4c7f7f;
+  width: 120px;
+}
+
+.song-selector .title-label {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: white;
+  margin-right: 10px;
+}
+
+.song-selector .input {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  width: 200px;
+  margin-right: 5px;
+  height: 32px;
+  background: none repeat scroll 0 0 #426f6f;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}
+
+.song-selector .remove {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  height: 32px;
+  background: none repeat scroll 0 0 #830000;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}

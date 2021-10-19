@@ -1,41 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import SongSelector from "./SongSelector/SongSelector";
 import "./styles.css";
 
-const Songs = ({ songs, setSongs }) => {
-  const songElements = songs.map((song, i) => {
-    return (
-      <div className="song-selector" key={"song:" + i}>
-        <div className="song-selector-name">{"Song #" + (i + 1) + ": "}</div>
-        <div className="song-selector-title">Title:</div>
-        <div className="song-selector-input">
-          <input
-            type="text"
-            onChange={(e) => {
-              let newState = [...songs];
-              newState[i].title = e.target.value;
-              setSongs(newState);
-            }}
-          ></input>
-        </div>
-        <div className="song-selector-remove">
-          <button>remove</button>
-        </div>
-      </div>
-    );
-  });
-
+const Songs = ({ songs, setSongs, postAttempt }) => {
   const addSong = () => {
     let newState = [...songs];
     newState.push({ title: "" });
     setSongs(newState);
   };
 
+  useEffect(() => {
+    for (let i = 0; i < songs.length; i++) {
+      let input = document.getElementById("song:title-selector:" + i);
+      input.value = songs[i].title;
+    }
+  });
+
   return (
-    <div className="songs-form">
-      <h3>Songs:</h3>
-      {songElements}
-      <div className="songs-addsong">
-        <button onClick={addSong}>Add New Song</button>
+    <div className="songs">
+      <h3 className="title">Songs:</h3>
+      {songs.map((song, i) => {
+        return (
+          <SongSelector
+            key={"song:" + i}
+            songs={songs}
+            setSongs={setSongs}
+            song={song}
+            sIndex={i}
+            postAttempt={postAttempt}
+          />
+        );
+      })}
+      <div className="new-song">
+        <button className="submit" onClick={addSong}>
+          Add New Song
+        </button>
       </div>
     </div>
   );
