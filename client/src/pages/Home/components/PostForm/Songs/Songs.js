@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-const SongsForm = ({ songs, setSongs }) => {
+const Songs = ({ songs, setSongs }) => {
   const songElements = songs.map((song, i) => {
     return (
       <div className="song-selector" key={"song:" + i}>
@@ -41,4 +41,4 @@ const SongsForm = ({ songs, setSongs }) => {
   );
 };
 
-export default SongsForm;
+export default Songs;

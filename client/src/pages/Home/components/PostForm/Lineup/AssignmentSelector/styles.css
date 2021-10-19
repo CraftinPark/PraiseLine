@@ -1,0 +1,36 @@
+.selector {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.selector .role-label {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: #4c7f7f;
+  width: 180px;
+}
+
+.selector .member-select {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  height: 32px;
+  background: none repeat scroll 0 0 #426f6f;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}
+
+
+.selector .remove {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  margin-left: 5px;
+  height: 32px;
+  background: none repeat scroll 0 0 #830000;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}

@@ -1,4 +1,4 @@
-.home-page {
+.homepage {
   display: grid;
 
   grid-template-areas: "navbar navbar navbar" "post-form posts members";
@@ -8,24 +8,22 @@
   background-color: green;
 }
 
-.home-page nav {
+.homepage .header-area {
   grid-area: navbar;
-  background-color: #4682b4;
-  color: white;
 
 }
 
-.home-page .left-main {
+.homepage .left-main {
   grid-area: post-form;
   background-color: #2f3136;
 }
 
-.home-page .middle-main {
+.homepage .middle-main {
   grid-area: posts;
   background-color: #36393f;
 }
 
-.home-page .right-main {
+.homepage .right-main {
   grid-area: members;
   background-color: #2f3136;
 }

@@ -1,17 +1,8 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 
 import "./styles.css";
 
-const Members = () => {
-  const [members, setMembers] = useState([]);
-
-  useEffect(() => {
-    axios.get("http://localhost:5000/members").then((response) => {
-      setMembers(response.data);
-    });
-  }, []);
-
+const Members = ({ members }) => {
   return (
     <div className="members">
       <div className="member-list">
