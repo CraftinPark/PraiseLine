@@ -1,0 +1,80 @@
+.postform__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  border-color: #2c4747;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.postform__header__date-section {
+  display: flex;
+  flex-direction: row;
+  color: #4c7f7f;
+  line-height: 32px;
+  margin: 9px;
+}
+
+.postform__header__date-label {
+  margin-right: 5px;
+}
+
+
+.postform__header__date-selector {
+  height: 32px;
+  background: none repeat scroll 0 0 #426f6f;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+  width: 200px;
+}
+
+.postform__header__date-selector:hover {
+  background-color: #638b8b;
+}
+
+.postform__header__title {
+  color: #4c7f7f;
+  line-height: 32px;
+  margin: 9px;
+}
+
+.postform__date-selector-empty-error {
+  position: absolute;
+  left: 600px;
+  top: 96px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.postform__date-selector-empty-error__pane {
+  margin-left: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  background-color: rgba(223, 43, 43, 0.8);
+  border-radius: 5px;
+  width: auto;
+  height: 32px;
+}
+
+.postform__date-selector-empty-error__arrow {
+  margin-left: 70px;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid rgba(223, 43, 43, 0.8);
+  border-left: 7px solid transparent;
+
+  border-right: 7px solid transparent;
+}
+
+.postform__date-selector-empty-error__label {
+  opacity: 100%;
+  font-family: Rubik;
+  font-size: 14px;
+  line-height: 32px;
+  color: white;
+}

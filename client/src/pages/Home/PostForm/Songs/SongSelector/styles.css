@@ -1,0 +1,50 @@
+.postform__songs__song {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.postform__songs__song__label {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: #4c7f7f;
+  width: 120px;
+}
+
+.postform__songs__song__title-label {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: white;
+  margin-right: 10px;
+}
+
+.postform__songs__song__title-input {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  width: 200px;
+  margin-right: 5px;
+  height: 32px;
+  background: none repeat scroll 0 0 #426f6f;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}
+
+.postform__songs__song__remove {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  height: 32px;
+  background: none repeat scroll 0 0 #830000;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}
+
+.postform__songs__song__remove:hover {
+  cursor: pointer;
+  background-color: #c02a2a;
+}

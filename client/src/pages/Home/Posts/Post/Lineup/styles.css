@@ -1,0 +1,27 @@
+.post__lineup__assignment {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+}
+
+.post__lineup__assignment-label {
+  color: #72767D;
+  margin-right: 10px;
+}
+
+.post__lineup__assignment-member {
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #202225;
+  margin-left: 5px;
+  color: #008640;
+  font-family: "Rubik-medium"
+}
+
+.post__lineup__assignment-member:hover {
+  background-color: #40454b;
+  cursor: pointer;
+}

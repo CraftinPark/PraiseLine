@@ -1,0 +1,52 @@
+.post {
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #2f3136;
+
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  padding: 15px;
+}
+
+.post__date-section {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.post__date-label {
+  color: #72767D;
+  margin-right: 10px;
+}
+
+.post__date {
+  color: white;
+}
+
+.post__lineup-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.post__lineup-label {
+  color: #72767D;
+  margin-top: 10px;
+}
+
+.post__divider {
+  height: 1px;
+  background-color: #2f3136;
+}
+
+.post__songs-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.post__songs-label {
+  color: #72767D;
+  margin-top: 10px;
+}

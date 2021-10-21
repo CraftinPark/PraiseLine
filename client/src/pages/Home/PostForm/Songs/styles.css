@@ -1,0 +1,30 @@
+.postform__songs {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.postform__title {
+  margin: 0px;
+  color: white;
+}
+
+
+
+.postform__new-song {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.postform__new-song__submit {
+  height: 32px;
+  background: none repeat scroll 0 0 #0063b2;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+  width: 120px;
+}
+
+.postform__new-song__submit:hover {
+  cursor: pointer;
+  background-color: #1286e6;
+}

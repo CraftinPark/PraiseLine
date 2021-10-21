@@ -8,28 +8,23 @@
   background-color: green;
 }
 
-.homepage .header-area {
+.homepage__header-area {
   grid-area: navbar;
 
 }
 
-.homepage .left-main {
+.homepage__left-main {
   grid-area: post-form;
   background-color: #2f3136;
 }
 
-.homepage .middle-main {
+.homepage__middle-main {
   grid-area: posts;
   background-color: #36393f;
 }
 
-.homepage .right-main {
+.homepage__right-main {
   grid-area: members;
   background-color: #2f3136;
 }
 
-.main-title {
-  margin: 0px 0px 0px 5px;
-  font-size: 50px;
-  line-height: 50px;
-}

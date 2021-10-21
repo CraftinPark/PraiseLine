@@ -1,0 +1,29 @@
+.post__song {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+}
+
+.post__song:hover {
+  background-color: #40454b;
+  cursor: pointer;
+}
+
+.post__song__title-label,
+.post__song__key-label {
+  color: #72767d;
+  margin-right: 10px;
+}
+
+.post__song__title,
+.post__song__key {
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #202225;
+  color: white;
+  margin-right: 10px;
+  font-family: "Rubik"
+}

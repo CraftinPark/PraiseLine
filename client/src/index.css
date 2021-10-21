@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Rubik-medium";
+  src: local("Rubik"), url("./assets/fonts/Rubik-Medium.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Rubik";
   src: local("Rubik"), url("./assets/fonts/Rubik-Regular.ttf") format("truetype");
 }

@@ -1,0 +1,14 @@
+.members__member {
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #202225;
+  margin: 5px;
+  color: darkgoldenrod;
+  font-family: "Rubik-medium";
+}
+
+.members__member:hover {
+  background-color: #202225;
+  cursor: pointer;
+}

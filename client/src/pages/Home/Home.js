@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Header from "./components/Header/Header";
-import PostForm from "./components/PostForm/PostForm";
-import Members from "./components/Members/Members";
-import Posts from "./components/Posts/Posts";
+import Header from "./Header/Header";
+import PostForm from "./PostForm/PostForm";
+import Members from "./Members/Members";
+import Posts from "./Posts/Posts";
 import "./styles.css";
 
 function Home() {
@@ -18,16 +18,16 @@ function Home() {
 
   return (
     <main className="homepage">
-      <section className="header-area">
+      <section className="homepage__header-area">
         <Header />
       </section>
-      <section className="left-main">
+      <section className="homepage__left-main">
         <PostForm members={members} />
       </section>
-      <section className="middle-main">
+      <section className="homepage__middle-main">
         <Posts />
       </section>
-      <section className="right-main">
+      <section className="homepage__right-main">
         <Members members={members} />
       </section>
     </main>
