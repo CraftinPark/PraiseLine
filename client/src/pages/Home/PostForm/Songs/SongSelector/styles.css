@@ -48,3 +48,39 @@
   cursor: pointer;
   background-color: #c02a2a;
 }
+
+.postform__songs__song-selector__empty-error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.postform__songs__song-selector__empty-error__pane {
+  margin-left: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  background-color: rgba(223, 43, 43, 0.8);
+  border-radius: 5px;
+  width: auto;
+  height: 32px;
+}
+
+.postform__songs__song-selector__empty-error__arrow {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+
+  border-right: 10px solid rgba(223, 43, 43, 0.8);
+}
+
+.postform__songs__song-selector__empty-error__label {
+  opacity: 100%;
+  font-family: Rubik;
+  font-size: 14px;
+  line-height: 32px;
+  color: white;
+}

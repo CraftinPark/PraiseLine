@@ -1,0 +1,87 @@
+.loginpage {
+  background-color: slategray;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginpage__header {
+  color: white;
+}
+
+.loginpage__window {
+  background-color: #595e68;
+  height: 300px;
+  width: 500px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginpage__window__username {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.loginpage__window__username__label {
+  color: white;
+  font-family: "Rubik-medium";
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.loginpage__window__username__input {
+  height: 32px;
+  background: none repeat scroll 0 0 #4e525a;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+}
+
+.loginpage__window__password {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.loginpage__window__password__label {
+  color: white;
+  font-family: "Rubik-medium";
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.loginpage__window__password__input {
+  height: 32px;
+  background: none repeat scroll 0 0 #4e525a;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+  font-size: 20px;
+}
+
+.loginpage__window__submit {
+  height: 32px;
+  background: none repeat scroll 0 0 slateblue;
+  border: 0px;
+  border-radius: 5px 5px 5px 5px;
+  color: white;
+  width: 270px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+}

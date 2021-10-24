@@ -31,7 +31,8 @@
 }
 
 .postform__header__date-selector:hover {
-  background-color: #638b8b;
+  cursor: pointer;
+  /* background-color: #638b8b; */
 }
 
 .postform__header__title {

@@ -17,10 +17,10 @@ const SongSelector = ({ songs, setSongs, song, sIndex, postAttempt }) => {
     if (document.getElementById("song:title-selector:" + sIndex))
       if (document.getElementById("song:title-selector:" + sIndex).value === "" && postAttempt)
         return (
-          <div className="lineup-role-selector-empty-error">
-            <div className="arrow"></div>
-            <div className="pane">
-              <label>Please choose a song</label>
+          <div className="postform__songs__song-selector__empty-error">
+            <div className="postform__songs__song-selector__empty-error__arrow"></div>
+            <div className="postform__songs__song-selector__empty-error__pane">
+              <label className="postform__songs__song-selector__empty-error__label">Please choose a song</label>
             </div>
           </div>
         );

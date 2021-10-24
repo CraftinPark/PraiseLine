@@ -17,7 +17,7 @@
 
 .postform__lineup__role-adder__selector:hover {
   cursor: pointer;
-  background-color: #638b8b;
+  /* background-color: #638b8b; */
 }
 
 .postform__lineup__role-adder__submit {
